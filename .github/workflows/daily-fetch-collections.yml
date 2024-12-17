@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # 允许手动触发
 
 jobs:
-  update-data:
+  fetch-collections:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run fetch script
+      - name: Run script
         run: bun run index.ts
 
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "chore: update user data [skip ci]" || exit 0
+          git commit -m "chore: fetch collections [skip ci]" || exit 0
           git push
