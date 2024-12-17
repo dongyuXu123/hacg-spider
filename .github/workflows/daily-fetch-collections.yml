@@ -1,4 +1,4 @@
-name: Get Collections
+name: Fetch Collections
 
 on:
   schedule:
