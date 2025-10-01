@@ -81,7 +81,7 @@ const parsePage = async (html: string) => {
       href: $article.find('.entry-title a').attr('href'),
     }
     if (isValidArticle(article)) {
-      if (article.title.match(/\d{4}年\d+月合集/)) {
+      if (article.title.match(/\d{4}年\d+月动画合集/)) {
         await processArticle(article)
       }
     }
