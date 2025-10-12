@@ -90,7 +90,7 @@ const parsePage = async (html: string) => {
 
 await Promise.all(
   Array
-    .from({ length: 3 }, (_, index) => index + 1)
+    .from({ length: 40 }, (_, index) => index + 1)
     .map(async (i) => {
       const html = await fetchPage(i)
       await parsePage(html)
