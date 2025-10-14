@@ -81,7 +81,7 @@ const parsePage = async (html: string) => {
       href: $article.find('.entry-title a').attr('href'),
     }
     if (isValidArticle(article)) {
-      if (article.title.match(/2023年11月合集/)) {
+      if (article.title.match(/鋼鉄の魔女/)) {
         await processArticle(article)
       }
     }
@@ -90,7 +90,7 @@ const parsePage = async (html: string) => {
 
 await Promise.all(
   Array
-    .from({ length: 40 }, (_, index) => index + 1)
+    .from({ length: 90 }, (_, index) => index + 1)
     .map(async (i) => {
       const html = await fetchPage(i)
       await parsePage(html)
